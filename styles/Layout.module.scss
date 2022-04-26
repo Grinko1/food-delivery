@@ -1,0 +1,36 @@
+.container{
+    .header{
+        position:fixed;
+        height: 60px;
+        top:0;
+        left:0;
+        right: 0;
+        width:100%;
+        background-image: url('https://www.foodnavigator-asia.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-asia.com/article/2021/02/10/gi-glossary-for-asia-and-middle-east-researchers-create-first-database-for-everything-from-dim-sum-to-habba-hamra/12178646-1-eng-GB/GI-glossary-for-Asia-and-Middle-East-Researchers-create-first-database-for-everything-from-dim-sum-to-habba-hamra.jpg');
+        background-position: center;
+        overflow: hidden;
+        z-index: 999;
+      
+    }
+    .navbar{
+        // position:fixed;
+        height: 60px;
+        margin-top:60px;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 2rem;
+        a:nth-child(1){
+            font-size: 28px;
+            font-weight: 800;
+            color: rgb(53, 34, 34);
+        }
+    }
+   
+    .hr{
+        width: 100%;
+        // margin-top: 60px;
+        color: rgb(53, 34, 34);
+    }
+}

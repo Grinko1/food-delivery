@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    width: 70%;
+    margin:5px 15%;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    .img{
+        width: 200px;
+        height: 200px;
+        margin-left: 20px;
+        object-fit: contain;
+    }
+    .rigth{
+        height: 100px;
+        display: flex;
+        margin: auto;
+        text-align: center;
+    
+   
+    
+ 
+    .info{
+        display: flex;
+        width: 500px;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        margin:0 20px;
+        .name{
+            color:rgb(53, 34, 34);
+        }
+    }
+    .qtt{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        .add{
+            display: flex;
+            align-items: center;
+            border:1px solid lightgray;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .total{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .delete{
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        margin: 0 20px;
+        color: red;;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+}

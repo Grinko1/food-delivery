@@ -1,0 +1,77 @@
+.container{
+    
+    width: 900px;
+    margin: auto;
+    .first{
+        display: flex;
+    .left{
+        flex: 1;
+            width: 50%;
+            margin: auto;
+            .img{
+            width: 400px;
+            height: 400px;
+            object-fit: contain;
+        }
+       
+    }
+    .rigth{
+        flex: 1;
+        margin-top: 50px;
+     
+        .info{
+            width: 500px;
+            margin: auto;
+          
+      
+            .name{
+                text-align: center;
+            }
+            .priceAndWeigth{
+                display: flex;
+                justify-content: space-around;
+                margin: 10px 0;
+            }
+        }
+            .compound{
+                display: flex;
+                flex-direction: column;
+             
+                b{
+                   text-align: center;   
+                }
+                .compoundItem{
+                    text-align: center;  
+                }
+               
+            }
+       
+    }
+}
+    .order{
+        display: flex;
+        margin-top: 20px;
+        .deliv{
+            flex: 1;
+            text-align: center;
+        }.btnDiv{
+            flex: 1;
+           .btn{
+            width: 250px;
+            margin: auto;
+            background-color: rgb(214, 5, 5);
+            color: white;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: 500;
+            border:none;
+            border-radius:10px;
+            margin-left: 20%;
+            cursor: pointer;
+ 
+
+        } 
+        }
+        
+    }
+}
