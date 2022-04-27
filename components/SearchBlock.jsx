@@ -4,6 +4,7 @@ import style from '../styles/Search.module.scss'
 
 const SearchBlock = () => {
 
+ 
     const {categories}= useSelector(state => state.category)
     const dispatch = useDispatch()
     const handleCategory = (search) => {

@@ -2,12 +2,33 @@ import Image from 'next/image';
 import style from '../styles/FoodList.module.scss';
 import { allFood, chicken, rice, fish, ice, fruicts, curry, drinks } from '../db';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { addToCart, getTotals } from '../features/cartSlice';
+import { useRouter } from 'next/router';
 
 const FoodList = () => {
+
+    //btn cart to csroll
+    const [scroll, setScroll] = useState(0);
+    const router = useRouter()
+    const {cartTotalQuantity} = useSelector(state => state.cart)
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    };
+  
+ 
+  useEffect(() => {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    //sort by category
+
   const [products, setProducts] = useState(allFood);
   const { activeCategory } = useSelector((state) => state.category);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (activeCategory === 'chicken') {
@@ -28,15 +49,20 @@ const FoodList = () => {
           setProducts(allFood)
       }
   }, [activeCategory]);
-  console.log(activeCategory);
+
+  const handleAddToCart = (item) => {
+      dispatch(addToCart({...item, cartQuantity: + 1})) 
+        dispatch(getTotals())
+  }
 
   return (
     <div className={style.container}>
       <div className={style.food}>
         {products.map((item) => (
-          <Link href={`/dish/${item.id}`} key={item.id}>
+        
+              <div className={style.item}  key={item.id}>
+                    <Link href={`/dish/${item.id}`}>
             <a>
-              <div className={style.item}>
                 <div className={style.imgCentr}>
                   <Image
                     src={item.img}
@@ -48,15 +74,21 @@ const FoodList = () => {
                 </div>
 
                 <p className={style.name}>{item.name}</p>
-                <p className={style.price}>
-                  {' '}
-                  <mark className={style.mark}>{item.price}p</mark>
-                </p>
-              </div>
-            </a>
+                </a>
           </Link>
+
+                <div className={style.cart}>
+                    <p  className={style.price}>{item.price}p</p>
+                    <p className={style.inCart} data-tooltip='В корзину' onClick={()=>handleAddToCart(item)}><AiOutlineShoppingCart/>{ item.cartQuantity > 0 && <i>{item.cartQuantity}</i>}</p>
+                  
+                </div>
+              </div>
+           
         ))}
       </div>
+      {
+        scroll >= 60 ? (<button className={style.btn} onClick={()=>router.push('/cart')}><AiOutlineShoppingCart/><span className={style.qtt}>{cartTotalQuantity}</span></button>) :''
+      }
     </div>
   );
 };

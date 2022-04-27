@@ -31,22 +31,82 @@
                 height: 43px;
             }
 
-            .price{
-                width: 60px;
+            .cart{
+                width: 150px;
                 margin: auto;
                 margin-bottom: 10px;
-              
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                .inCart{
+                    font-size: 24px;
+                    color:rgb(95, 3, 3);
+                    cursor: pointer;
+                }
             }
-            .mark{
+            .price{
                 background-color: rgba(214, 5, 5);
                 color:white;
                 border-radius: 20px;
                 padding: 10px;
                 font-weight: 500;
+                font-size: 16px;
             }
         }
         .item:hover{
             transform: scale(1.1);
         }
     }
+    [data-tooltip] {
+        position: relative; 
+       }
+       [data-tooltip]::after {
+        content: attr(data-tooltip); 
+        position: absolute; 
+        width: 80px; 
+        height: 20px;
+        left: -5px; top: 25px;
+        padding: 0.2em;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+        pointer-events: none; 
+        opacity: 0; 
+        transition: 0.7s; 
+       } 
+       [data-tooltip]:hover::after {
+        opacity: 1; 
+
+        
+}
+.btn{
+    position: fixed;
+    height: 50px;
+    width: 60px;
+    top: 90vh;
+    right: 15px;
+    background-color:green;
+    color:white;
+    border:none;
+    font-size: 22px;
+    padding: 5px 15px 0px;
+    border-radius: 5px;
+    opacity: 0.6;
+    text-align: center;
+    .qtt{
+        
+        font-size: 10px;
+        position: absolute;
+        border:1px solid white;
+        border-radius: 50%;
+        padding: 1px 4px;
+        top: 3px;
+        right: 4px;
+
+    }
+}
+.btn:hover{
+    opacity: 1;
+}
 }

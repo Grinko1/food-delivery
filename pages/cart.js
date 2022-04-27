@@ -1,9 +1,13 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../components/CartItem'
+import { decreaseCart } from '../features/cartSlice';
 import style from '../styles/Cart.module.scss'
 
 const cart = () => {
     const cart = useSelector(state=>state.cart.cartItems)
+    const dispatch = useDispatch()
+
+ 
 
     return (
         <div className={style.conteiner}>
@@ -12,7 +16,7 @@ const cart = () => {
                 {
                     cart.length ? (
                         cart.map(item => (
-                            <CartItem key={item.id} {...item} />
+                            <CartItem key={item.id} {...item}  />
                         ))
                     ): (
                         <p>В корзине ничего нет</p>
