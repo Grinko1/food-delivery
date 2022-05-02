@@ -75,3 +75,43 @@
         
     }
 }
+
+@media screen and (max-width: 480px) {
+.container{
+    max-width: 390px;
+    .first{
+        display: flex;
+        flex-direction: column;
+        .left{
+            width: 300px;
+                .img{
+                width: 300px;
+                height: 300px;
+                object-fit: contain;
+                margin-right: 10%;
+            }
+           
+        }
+        .rigth{
+            flex: 1;
+            margin-top: 50px;
+         
+            .info{
+                width: 380px;
+                margin: auto;
+               
+        }
+        }
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        .deliv{
+            margin: 20px 0;
+        }
+        
+    }
+}
+
+}

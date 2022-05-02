@@ -49,7 +49,7 @@ const FoodDetail = () => {
                 <h1 className={style.name}>{dish.name}</h1>
                 <div className={style.priceAndWeigth}>
                   <div>
-                    Вес: <b>{dish.weigth}г</b>
+                    Вес: <b>{dish.weigth} {dish.weigth < 1 ? 'л' : 'г'}</b>
                   </div>
                   <div>
                     {' '}

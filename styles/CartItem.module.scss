@@ -29,6 +29,10 @@
         .name{
             color:rgb(53, 34, 34);
         }
+        .weigth{
+            display: flex;
+            gap: 10px;
+        }
     }
     .qtt{
         display: flex;
@@ -64,4 +68,47 @@
         font-weight: 600;
     }
 }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 20px;
+      width: 350px;
+      .img{
+          margin: auto;
+      }
+      .rigth{
+          flex-direction: column;
+          height: auto;
+          max-width: 350px;
+          .info{
+                width: 350px; 
+                display: flex;
+                flex-direction: column;  
+                margin: auto;
+                margin-bottom: 50px;
+          }
+          .qtt{
+            height: auto;
+            margin: auto;
+            margin-bottom: 20px;
+          }
+          .total{
+              font-weight: 500;
+              font-size: 18px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
+          .delete{
+              justify-content: end;
+              margin: 5px 20px;
+              font-size: 24px;
+          }
+      }
+  
+   
+  }
 }

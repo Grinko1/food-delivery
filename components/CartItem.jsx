@@ -17,6 +17,7 @@ const handleAddToCart = (item) => {
 }
 const handleDeleteAll = (item) => {
   dispatch(removeFromCart(item))
+  dispatch(getTotals())
 }
 
   return (
@@ -31,8 +32,11 @@ const handleDeleteAll = (item) => {
       <div className={style.rigth}>
         <div className={style.info}>
           <h2 className={style.name}>{item.name}</h2>
-          <p>{item.weigth}г</p>
+          <div className={style.weigth}>
+              <p>{item.weigth}г</p>
           <p>{item.price}р</p>
+          </div>
+        
         </div>
         <div className={style.qtt}>
           <div className={style.add}>
@@ -50,6 +54,7 @@ const handleDeleteAll = (item) => {
           <AiOutlineDelete onClick={() => handleDeleteAll(item)}/>
         </div>
       </div>
+
     </div>
   );
 };

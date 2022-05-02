@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTotals } from '../features/cartSlice';
 import style from '../styles/Layout.module.scss';
+import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { BsTruck} from 'react-icons/bs'
 
 
 const Layout = ({ children }) => {
@@ -15,6 +17,8 @@ const Layout = ({ children }) => {
     },[])
    
     const {cartTotalQuantity} = useSelector(state => state.cart)
+    const {order} = useSelector(state => state.order)
+
   return (
     <div className={style.container}>
       <Head>
@@ -26,9 +30,15 @@ const Layout = ({ children }) => {
         <Link href="/">
           <a>EAST FOOD</a>
         </Link>
-        <Link href="/cart">
-          <a>Корзина {cartTotalQuantity}</a>
+        <div className={style.end}>
+           <Link href="/cart">
+          <a> <p className={style.cart}><AiOutlineShoppingCart  className={style.cartIcon}/><span className={style.badge2}>{cartTotalQuantity}</span> </p></a>
         </Link>
+        <Link href="/order-history">
+          <a> <p className={style.cart}><BsTruck  className={style.cartIcon}/><span className={style.badge}>{order.length}</span> </p></a>
+        </Link>
+        </div>
+       
       </div>
       <hr className={style.hr} />
 

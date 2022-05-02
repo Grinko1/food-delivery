@@ -1,0 +1,87 @@
+.header {
+  text-align: center;
+  color: rgb(95, 3, 3);
+}
+.container {
+  display: flex;
+  height: 100vh;
+  .order {
+    flex: 1;
+    margin-top: 60px;
+  .thead{
+      b{
+        color: rgb(95, 3, 3);
+      }
+    display: grid;
+    grid-template-columns: 300px 90px 90px 90px;
+    border:1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 2px;
+    max-width: 600px;
+
+  }
+  .total{
+      font-size: 24px;
+      color: rgb(214, 5, 5);
+      font-weight: 700;
+      margin: 30px 0 0 500px;
+  }
+  }
+  .custumer {
+    flex: 1;
+    .form {
+        width: 310px;
+        margin: auto;
+      .eachForm {
+        margin: 10px;
+        .input {
+          width: 300px;
+          padding: 10px;
+          border-radius: 5px;
+          border:1px solid gray;
+        }
+      }
+      .error{
+        border:1px solid red;
+        padding: 10px;
+        margin-left: 10px;
+        width: 300px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .btn{
+        width: 50%;
+        background-color: rgb(214, 5, 5);
+        color:white;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px  0 0 25%;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .container{
+    flex-direction: column;
+    .order{
+      .thead{
+        grid-template-columns: 200px 50px 50px 50px;
+      }
+      .total{
+        font-size: 24px;
+        color: rgb(214, 5, 5);
+        font-weight: 700;
+        margin: 30px 0 0 0;
+        text-align: center;
+    }
+    }
+  }
+}

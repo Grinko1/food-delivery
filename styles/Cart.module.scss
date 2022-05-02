@@ -3,4 +3,37 @@
         text-align: center;
         color: rgb(53, 34, 34);
     }
+
+
+    .order{
+        width: 50%;
+        margin: auto;
+        margin-top: 40px;
+        .btn{
+            width: 30%;
+            margin: auto;
+            background-color: rgb(214, 5, 5);
+            color:white;
+            border:none;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 35%;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .conteiner{
+        .order{
+            .btn{
+                width: 60%;
+                margin-left: 20%;
+            }
+        }
+    
+    }
+    
 }

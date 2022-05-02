@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    width: 700px;
+    margin: auto;
+    margin-top: 70px;
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        p{
+            color:blue;
+            text-decoration: underline;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .container{
+        flex-direction: column;
+        width: 350px;
+        text-align: center;
+    }
+}

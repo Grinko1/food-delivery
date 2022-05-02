@@ -1,0 +1,123 @@
+.container {
+  display: flex;
+  width: 900px;
+  margin: auto;
+
+  .form {
+    width: 400px;
+    height: 257px;
+    background: #2a9aff;
+    background: -moz-radial-gradient(center, #2a9aff 0%, #407da4 0%, #11406b 100%);
+    background: -webkit-radial-gradient(center, #2a9aff 0%, #407da4 0%, #11406b 100%);
+    background: radial-gradient(ellipse at center, #2a9aff 0%, #407da4 0%, #11406b 100%);
+    border-radius: 8px;
+    margin: 47px 0 0 50px;
+    .input {
+      margin-top: 5px;
+      label {
+        display: block;
+        width: 380px;
+        text-align: center;
+        margin: 15px 0 5px;
+        color: white;
+      }
+      input {
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        margin-left: 15%;
+      }
+      .cvc {
+        width: 100px;
+      }
+    }
+    .block {
+      display: flex;
+      margin-top: 20px;
+      .inputBlock {
+        width: 200px;
+        .cvc {
+          width: 100px;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid grey;
+        }
+        .labelBlock {
+          text-align: left;
+          width: 200px;
+          display: block;
+          color: white;
+        }
+        .select {
+          margin-right: 10px;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+      .inputBlock:first-child {
+        margin-left: 70px;
+      }
+    }
+  }
+}
+.error{
+    width: 180px;
+      padding: 10px;
+      border: 1px solid red;
+      border-radius: 5px;
+      color:red;
+      margin: 0 0 20px 57%;
+      
+}
+.submit {
+  width: 250px;
+  margin: auto;
+ 
+  .btn {
+    width: 250px;
+    padding: 10px 0;
+    border:none;
+    background-color: rgb(214, 5, 5);
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color:white;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn:hover {
+      transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 480px) {
+    .container{
+        width: 350px;
+        flex-direction: column;
+        margin-bottom: 20px;
+        .form{
+            width: 350px;
+            margin: 0;
+            .input{
+                label{
+                    width: 100%;
+                    margin-left: 5px;
+                }
+               input{
+                  margin-left: 7%; 
+               } 
+               
+            }
+            .block {
+                 .inputBlock:first-child {
+                   margin-left: 10px;
+                 }  
+            }
+        }
+    }
+    .error{
+        margin: 10px 0 20px 24% ;
+        
+    }
+
+}
