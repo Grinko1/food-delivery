@@ -6,7 +6,7 @@ import { decreaseCart } from '../features/cartSlice';
 import { newOrder } from '../features/orderSlice';
 import style from '../styles/Cart.module.scss'
 
-const cart = () => {
+const Cart = () => {
     const cart = useSelector(state=>state.cart.cartItems)
     const dispatch = useDispatch()
     const router = useRouter()
@@ -44,4 +44,4 @@ const cart = () => {
     );
 };
 
-export default cart;
+export default Cart;
